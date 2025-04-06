@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Based Smart Food Waste Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #fff6f6;
+      color: #2e2e2e;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff4d4d, #cc0000);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    nav {
+      background-color: #fff0f0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #cc0000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url('https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: white;
+      height: 80vh;
+      text-align: center;
+      padding: 20px;
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .feature {
+      background-color: #ffeaea;
+      margin: 30px auto;
+      padding: 40px;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .feature img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .upload-section input {
+      margin: 20px 0;
+    }
+
+    .btn {
+      background-color: #cc0000;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #e60000;
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .learn-btn {
+      background-color: #cc0000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .learn-btn:hover {
+      background-color: #e60000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><i class="fas fa-utensils"></i> Smart Food Waste Tracker</h1>
+    <p>AI-Powered Platform to Reduce Food Waste and Support SDG Goals</p>
+  </header>
+
+  <nav>
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#upload">Upload</a>
+    <a href="#how-it-works">Demo</a>
+    <a href="#donate">Donate</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Transforming Leftovers Into Hope 🍱</h2>
+    <p>With AI, we track, analyze and reduce food waste — redirecting it to feed people, not landfills.</p>
+  </section>
+
+  <section class="feature" id="problem">
+    <h3><i class="fas fa-exclamation-triangle"></i> Understanding the Problem</h3>
+    <p>Every year, around <strong>1.3 billion tons</strong> of food is wasted while <strong>828 million</strong> people go to bed hungry. This waste also contributes to climate change and resource depletion.</p>
+    <p>Our mission aligns with <strong>SDG 2 (Zero Hunger)</strong> and <strong>SDG 12 (Responsible Consumption)</strong> to promote sustainable and efficient food systems for all.</p>
+    <img src="pic3.jpg" alt="Food Waste Awareness">
+  </section>
+
+  <section class="feature" id="solution">
+    <h3><i class="fas fa-lightbulb"></i> Our Smart Solution</h3>
+    <p>The <strong>AI-Based Smart Food Waste Tracker</strong> empowers users to:</p>
+    <ul style="text-align: left; margin-top: 20px;">
+      <li><i class="fas fa-camera"></i> Upload food images to analyze type and quantity</li>
+      <li><i class="fas fa-hand-holding-heart"></i> Get suggestions to donate or compost food</li>
+      <li><i class="fas fa-map-marker-alt"></i> Locate nearby NGOs/food banks</li>
+      <li><i class="fas fa-leaf"></i> Learn sustainable food habits</li>
+    </ul>
+    <img src="pic4.jpeg" alt="AI Solution Food Waste">
+  </section>
+
+  <section class="feature upload-section" id="upload">
+    <h3><i class="fas fa-upload"></i> Upload Food Waste Image</h3>
+    <label>Enter your Name:</label><br>
+    <input type="text" id="username" placeholder="Your Name"><br>
+    <label>Enter your City:</label><br>
+    <input type="text" id="usercity" placeholder="Your City"><br>
+    <p>Select an image of leftover food:</p>
+    <input type="file" id="foodImage">
+    <br>
+    <button class="btn" onclick="simulateAI()">Analyze</button>
+    <p id="aiResult"></p>
+  </section>
+
+  <section class="feature" id="how-it-works">
+    <h3>How our AI-Based Smart Food Tracker Works?</h3>
+    <a href="working.html">
+      <button class="learn-btn">Learn More</button>
+    </a>
+  </section>
+
+  <section class="feature" id="donate">
+    <h3><i class="fas fa-hands-helping"></i> Connect with NGOs & Donate</h3>
+    <p>Click below to find food donation centers near you and contribute to reducing food waste:</p>
+    <button class="btn" onclick="window.open('https://www.feedingindia.org/', '_blank')">Find Food Donation Centers</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Smart Food Waste Tracker | Made for Google SDG Project 🌍
+  </footer>
+
+  <button class="top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⬆</button>
+
+  <script>
+    function simulateAI() {
+      const fileInput = document.getElementById('foodImage');
+      const aiResult = document.getElementById('aiResult');
+
+      if (!fileInput.files.length) {
+        aiResult.innerHTML = `<p style="color:red; font-weight:bold;">⚠️ Please upload an image first!</p>`;
+        return;
+      }
+
+      const foodOptions = [
+        { type: "Rice", suggestion: "Compost it 🌱", color: "#a3d977" },
+        { type: "Curry", suggestion: "Compost it 🌱", color: "#f4b400" },
+        { type: "Bread", suggestion: "Donate to NGOs 🤝", color: "#f7a072" },
+        { type: "Fruits", suggestion: "Donate to NGOs 🤝", color: "#7ddf64" },
+        { type: "Salad", suggestion: "Compost it 🌱", color: "#6ee7b7" },
+        { type: "Meat", suggestion: "Donate to NGOs 🤝", color: "#fd6e6e" },
+        { type: "Dessert", suggestion: "Compost it 🌱", color: "#ffbbf0" }
+      ];
+
+      const result = foodOptions[Math.floor(Math.random() * foodOptions.length)];
+
+      aiResult.innerHTML = `
+        <div style="
+          background-color: ${result.color}; 
+          padding: 20px;
+          border-radius: 15px; 
+          display: inline-block;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          animation: fadeIn 0.5s ease;
+          margin-top: 20px;
+        ">
+          <h3 style="margin-bottom: 10px;">🍽️ Detected Food: <span style="color: #333;">${result.type}</span></h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">✅ Suggestion: ${result.suggestion}</p>
+        </div>
+      `;
+    }
+  </script>
+</body>
+
+</html>
