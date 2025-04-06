@@ -1,73 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How It Works - Smart Food Waste Tracker</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Fira Sans', sans-serif;
-      background-color: #f4f6f9;
-      color: #2b2d42;
-      padding: 20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .content {
-      max-width: 800px;
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background: linear-gradient(135deg, #fff0f0, #ffe5e5);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff4d4d, #cc0000);
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    h1 {
+    h2 {
       text-align: center;
-      color: #2b2d42;
+      color: #cc0000;
+      margin-bottom: 20px;
+    }
+
+    .step {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .step img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .step-text {
+      flex: 1;
+      padding: 10px;
     }
 
     .btn-home {
+      display: block;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .btn-home a {
-      background-color: #ff5c5c;
+      background-color: #cc0000;
       color: white;
-      padding: 10px 25px;
-      border-radius: 8px;
+      padding: 12px 25px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
 
-    ul {
-      line-height: 1.8;
-      margin-top: 20px;
+    .btn-home a:hover {
+      background-color: #e60000;
     }
 
-    li::marker {
-      color: #ff5c5c;
+    footer {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1><i class="fas fa-cogs"></i> How It Works</h1>
+    <p>From food image to impact — a smart journey powered by AI</p>
+  </header>
 
-<div class="content">
-  <h1><i class="fas fa-cogs"></i> How Our System Works</h1>
-  <ul>
-    <li>User uploads a picture of leftover food</li>
-    <li>AI analyzes the food type using image recognition</li>
-    <li>The system suggests:
-      <ul>
-        <li>Composting if it's biodegradable</li>
-        <li>Donation if it's safe for reuse</li>
-      </ul>
-    </li>
-    <li>Future Scope: Maps for nearby NGOs & food banks</li>
-    <li>Our goal: Reduce waste and promote Zero Hunger (SDG 2)</li>
-  </ul>
+  <section>
+    <h2>Step-by-Step Process</h2>
 
-  <div class="btn-home">
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
-  </div>
-</div>
+    <div class="step">
+      <img src="w1.png" alt="Step 1 - Upload Image">
+      <div class="step-text">
+        <h3>1. Upload a Picture of Your Leftovers</h3>
+        <p>Just take a quick snap of your leftover food using your phone or computer and upload it to our platform.</p>
+      </div>
+    </div>
 
+    <div class="step">
+      <img src="w2.jpeg" alt="Step 2 - AI Analysis">
+      <div class="step-text">
+        <h3>2. AI Analysis of Food Type & Quantity</h3>
+        <p>Our AI analyzes the image to detect the type of food and estimate the quantity to provide actionable insights.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="w3.png" alt="Step 3 - Recommendations">
+      <div class="step-text">
+        <h3>3. Recommendations to Reduce Waste</h3>
+        <p>We suggest donating to local NGOs, composting at home, or preparing smaller portions based on your food habits.</p>
+      </div>
+    </div>
+
+    <div class="btn-home">
+      <a href="./index.html">⬅ Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Smart Food Waste Tracker | Reducing Waste with AI 💡
+  </footer>
 </body>
+
 </html>
